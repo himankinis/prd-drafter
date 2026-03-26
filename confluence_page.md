@@ -26,7 +26,7 @@ Every PRD generated with this prompt follows this structure:
 
 ## How to Use It
 
-**Step 1:** Write a short brief about your feature (3–5 sentences).
+**Step 1:** Write a short brief about your feature (3–5 sentences minimum, but more detail produces better output).
 
 **Step 2:** Copy the prompt from [Section 4](#the-prompt-ready-to-copy) and paste it into Isaac along with your brief.
 
@@ -37,13 +37,14 @@ Every PRD generated with this prompt follows this structure:
 ## The Prompt (ready to copy)
 
 ```
-You are a senior product manager. Using the brief below, draft a complete PRD
-following this exact template structure: Overview, Problem Statement, Goals &
-Success Metrics, User Stories, Functional Requirements, Non-Functional
-Requirements, Out of Scope, Open Questions, Timeline & Milestones. Fill in
-every section with specific, actionable content. Where information is missing
-from the brief, add reasonable assumptions clearly marked as [ASSUMPTION]. Keep
-the tone professional and concise. Here is my brief: [PASTE YOUR BRIEF HERE]
+You are a senior product manager at FICO. Using the brief below, draft a
+complete PRD following this exact template structure: Overview, Problem
+Statement, Goals & Success Metrics, User Stories, Functional Requirements,
+Non-Functional Requirements, Out of Scope, Open Questions, Timeline &
+Milestones. Fill in every section with specific, actionable content. Where
+information is missing from the brief, add reasonable assumptions clearly
+marked as [ASSUMPTION]. Keep the tone professional and concise.
+Here is my brief: [PASTE YOUR BRIEF HERE]
 ```
 
 ---
@@ -52,26 +53,20 @@ the tone professional and concise. Here is my brief: [PASTE YOUR BRIEF HERE]
 
 ### Sample Brief
 
-> We need to migrate our existing customers from the current-gen platform to the next-gen platform. The current-gen platform is being deprecated in Q4. Customers need a seamless transition with no data loss, minimal disruption to their workflows, and clear communication throughout the process. The migration must support both self-serve and assisted paths depending on customer tier.
+> NorthStar Migration Framework: A structured migration framework is needed to determine which customers move to NorthStar, in what order, and why. Three leadership decisions must be locked first — migration goal (recommended: Revenue Protection, prioritizing customers with nearest renewals and highest ARR at risk), customer segment (recommended: mixed approach with early adopters first for proof points, then current-gen clients sequenced by renewal proximity x ARR), and scorecard dimensions (ten proposed: ROI potential, feature parity readiness, relationship health, platform performance needs, scale and complexity, data migration complexity, business drivers, competitive risk, renewal proximity, strategic value). The framework follows 7 steps: Define Goal, Segment, Score & Prioritize using a weighted heat map, Platform Readiness Gate, Cohort Assignment, Execution, and Quality Gates across milestones M1 through M4. Sales leadership alignment is required before broad rollout since migration sequencing and renewal strategy are deeply interdependent.
 
 ### Condensed PRD Output (selected sections)
 
 ---
 
-**Feature:** Current-Gen to Next-Gen Platform Migration
+**Feature:** NorthStar Migration Framework
 **Status:** Draft | **Version:** 1.0
-
-**Overview**
-
-This PRD covers the end-to-end migration of existing customers from the current-gen platform to the next-gen platform ahead of the Q4 deprecation deadline. The migration will support two paths — self-serve for standard-tier customers and assisted migration for enterprise-tier customers — ensuring continuity of workflows and zero data loss throughout the transition.
 
 ---
 
-**Problem Statement**
+**Overview**
 
-The current-gen platform is scheduled for deprecation in Q4, requiring all active customers to transition to the next-gen platform. Without a structured migration process, customers risk data loss, workflow disruption, and churn. The lack of a clear migration path is already generating support tickets and customer escalations.
-
-Target users: All active current-gen customers, segmented by tier (standard vs. enterprise).
+The NorthStar Migration Framework is a structured decision-making product that determines which customers migrate to NorthStar, in what order, and under what conditions. It operationalizes a Revenue Protection migration goal by combining a weighted customer scorecard, a platform readiness gate, and a cohort assignment workflow — enabling sales and product leadership to sequence migrations by renewal proximity and ARR at risk. Sales leadership alignment is a prerequisite before broad rollout, given the deep interdependency between migration sequencing and renewal strategy.
 
 ---
 
@@ -79,16 +74,24 @@ Target users: All active current-gen customers, segmented by tier (standard vs. 
 
 | Goal | Metric | Target |
 |------|--------|--------|
-| Complete migration before deprecation | % of customers migrated by Q4 cutoff | 100% |
-| Minimize churn during migration | Customer churn rate during migration window | < 3% |
-| Reduce support load | Support tickets related to migration | < 5% of migrating accounts |
-| Maintain data integrity | Data loss incidents | 0 |
-
-`[ASSUMPTION]` — Churn target of < 3% is based on industry benchmarks; validate against internal historical data.
+| Protect at-risk ARR through prioritized migration | % of ARR-at-risk customers migrated ahead of renewal | ≥ 80% of targeted ARR protected within migration window |
+| Complete migrations on schedule by cohort | Cohort completion rate (customers migrated / customers assigned per cohort) | ≥ 90% completion rate per cohort at each milestone gate |
+| Reduce time-to-migrate per customer | Average time from cohort assignment to successful cutover | < 90 days per customer `[ASSUMPTION]` |
+| Drive early adopter proof points | Number of referenceable early adopter migrations completed before broad rollout | ≥ 3 referenceable accounts before M2 |
 
 ---
 
-*(Isaac generates the full remaining sections in the actual output — User Stories, Functional Requirements, Non-Functional Requirements, Out of Scope, Open Questions, and Timeline & Milestones.)*
+**Functional Requirements**
+
+- **Weighted Scorecard Engine** — The system must calculate a migration priority score for each customer across ten configurable dimensions (ROI potential, feature parity readiness, relationship health, platform performance needs, scale and complexity, data migration complexity, business drivers, competitive risk, renewal proximity, strategic value), with adjustable dimension weights set by product/sales leadership.
+- **Customer Segmentation Logic** — The system must support segmentation into at least two groups: early adopters (opt-in, proof-point focused) and current-gen clients sequenced by renewal proximity × ARR score.
+- **Platform Readiness Gate** — The system must enforce a readiness gate check before any customer is assigned to a migration cohort, validating feature parity status, data migration complexity, and relationship health thresholds.
+- **Cohort Assignment Workflow** — The system must support assignment of customers to named cohorts (M1–M4) with associated timelines, owners, and gate criteria, and must flag customers who fail readiness checks for manual review.
+- **Sales Leadership Review Dashboard** — The system must provide a dashboard view for sales leadership showing cohort composition, scorecard rankings, ARR at risk by cohort, and milestone gate status — enabling sign-off before each cohort is activated.
+
+---
+
+*(Isaac generates the full remaining sections in the actual output — Problem Statement, User Stories, Non-Functional Requirements, Out of Scope, Open Questions, and Timeline & Milestones.)*
 
 ---
 
@@ -98,11 +101,12 @@ Target users: All active current-gen customers, segmented by tier (standard vs. 
 - Always review sections marked `[ASSUMPTION]` before sharing
 - Use the output as a starting point, not a final doc
 - Add your own domain expertise and customer context after generation
+- For complex initiatives like migration frameworks, include the key decisions and constraints in your brief
 
 ---
 
 ## Advanced: Clone the Full Tool
 
-For those who want the full Claude Code workflow:
+For those who want the full Claude Code workflow with automated file generation, clone the repo:
 
 [https://github.com/himankinis/prd-drafter](https://github.com/himankinis/prd-drafter)
