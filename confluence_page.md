@@ -14,13 +14,14 @@ Every PRD generated with this prompt follows this structure:
 
 1. **Overview** — What is this feature and why does it matter?
 2. **Problem Statement** — What problem are we solving, and for whom?
-3. **Goals & Success Metrics** — What does success look like? (include measurable KPIs)
-4. **User Stories** — Who are the users and what do they need to accomplish?
-5. **Functional Requirements** — What must the product do?
-6. **Non-Functional Requirements** — Performance, security, scalability, accessibility constraints
-7. **Out of Scope** — What are we explicitly not building in this iteration?
-8. **Open Questions** — Unresolved decisions that need alignment
-9. **Timeline & Milestones** — Key phases, dates, and owners
+3. **Target Persona** — Who is this built for? (persona type, role, goals, pain points, and how they interact with the product)
+4. **Goals & Success Metrics** — What does success look like? (include measurable KPIs)
+5. **User Stories** — Who are the users and what do they need to accomplish?
+6. **Functional Requirements** — What must the product do?
+7. **Non-Functional Requirements** — Performance, security, scalability, accessibility constraints
+8. **Out of Scope** — What are we explicitly not building in this iteration?
+9. **Open Questions** — Unresolved decisions that need alignment
+10. **Timeline & Milestones** — Key phases, dates, and owners
 
 ---
 
@@ -39,11 +40,14 @@ Every PRD generated with this prompt follows this structure:
 ```
 You are a senior product manager at FICO. Using the brief below, draft a
 complete PRD following this exact template structure: Overview, Problem
-Statement, Goals & Success Metrics, User Stories, Functional Requirements,
-Non-Functional Requirements, Out of Scope, Open Questions, Timeline &
-Milestones. Fill in every section with specific, actionable content. Where
-information is missing from the brief, add reasonable assumptions clearly
-marked as [ASSUMPTION]. Keep the tone professional and concise.
+Statement, Target Persona, Goals & Success Metrics, User Stories, Functional
+Requirements, Non-Functional Requirements, Out of Scope, Open Questions,
+Timeline & Milestones. Fill in every section with specific, actionable
+content. For Target Persona, specify whether each persona is Internal or
+External, their role, and a brief description of their goals, pain points,
+and how they interact with the product. Where information is missing from the
+brief, add reasonable assumptions clearly marked as [ASSUMPTION]. Keep the
+tone professional and concise.
 Here is my brief: [PASTE YOUR BRIEF HERE]
 ```
 
@@ -70,6 +74,16 @@ The NorthStar Migration Framework is a structured decision-making product that d
 
 ---
 
+**Target Persona**
+
+| Persona Type | Role | Description |
+|---|---|---|
+| Internal | Sales Leadership | Reviews migration sequencing against renewal strategy; needs visibility into cohort composition, ARR at risk by cohort, and milestone gate status before signing off on each activation. |
+| Internal | Platform PM | Manages cohort assignment and readiness gates; responsible for ensuring feature parity and platform readiness criteria are met before customers advance in the migration queue. |
+| Internal | Ops Team | Pulls renewal dates, ARR, tier, and willingness signals to populate the weighted scorecard; primary data owner feeding the prioritization engine. |
+
+---
+
 **Goals & Success Metrics**
 
 | Goal | Metric | Target |
@@ -91,7 +105,7 @@ The NorthStar Migration Framework is a structured decision-making product that d
 
 ---
 
-*(Isaac generates the full remaining sections in the actual output — Problem Statement, User Stories, Non-Functional Requirements, Out of Scope, Open Questions, and Timeline & Milestones.)*
+*(Isaac generates the full remaining sections in the actual output — Problem Statement, User Stories, Non-Functional Requirements, Out of Scope, Open Questions, and Timeline & Milestones. Target Persona is shown above.)*
 
 ---
 

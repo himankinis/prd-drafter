@@ -27,7 +27,20 @@
 
 ---
 
-## 3. Goals & Success Metrics
+## 3. Target Persona
+
+### Persona Type
+<!-- Internal or External -->
+
+### Role
+<!-- e.g., Developer, Admin, Data Scientist, Business Analyst, End User, Operations, Partner -->
+
+### Description
+<!-- Briefly describe this persona's goals, pain points, and how they interact with the product. -->
+
+---
+
+## 4. Goals & Success Metrics
 
 ### Goals
 <!-- What are we trying to achieve? List 2–4 clear goals. -->
@@ -41,7 +54,7 @@
 
 ---
 
-## 4. User Stories
+## 5. User Stories
 
 <!-- Format: As a [user type], I want to [action] so that [benefit]. -->
 
@@ -53,7 +66,7 @@
 
 ---
 
-## 5. Requirements
+## 6. Requirements
 
 ### Functional Requirements
 <!-- What the system must do. Use "must", "should", "may" language. -->
@@ -76,14 +89,14 @@
 
 ---
 
-## 6. Out of Scope
+## 7. Out of Scope
 
 <!-- Explicitly list what this feature will NOT cover. -->
 -
 
 ---
 
-## 7. Open Questions
+## 8. Open Questions
 
 <!-- Unresolved decisions, dependencies, or risks that need answers before/during build. -->
 
@@ -93,7 +106,7 @@
 
 ---
 
-## 8. Timeline
+## 9. Timeline
 
 <!-- High-level milestones. Adjust phases as needed. -->
 
