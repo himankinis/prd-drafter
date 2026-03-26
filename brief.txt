@@ -1,0 +1,15 @@
+Feature: In-app notification preferences
+
+Users currently have no way to control which notifications they receive in the app.
+They either get everything or nothing (by disabling all notifications in device settings).
+This leads to notification fatigue and a high opt-out rate (~40% of users disable all notifications).
+
+We want to build a notification preferences screen where users can toggle individual
+notification types on/off: marketing emails, product updates, activity alerts, and
+weekly digest. Should also support a "quiet hours" setting.
+
+Target users: all registered users, both mobile (iOS/Android) and web.
+Success = reduce full notification opt-out rate from 40% to under 15% within 60 days of launch.
+
+Engineering estimate: ~3 weeks for backend + frontend.
+Designer is available starting next sprint.
