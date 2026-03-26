@@ -59,13 +59,14 @@ claude "Read brief.txt and templates/prd_template.md, then generate a complete P
 |---|---------|---------|
 | 1 | **Overview** | 2–3 sentence summary of the feature and why it matters |
 | 2 | **Problem Statement** | Current state, desired state, and impact of inaction |
-| 3 | **Goals & Success Metrics** | Goals and measurable KPIs with baselines and targets |
-| 4 | **User Stories** | Primary and secondary stories in As a / I want / So that format |
-| 5 | **Functional Requirements** | What the system must do, prioritised P0 / P1 / P2 |
-| 6 | **Non-Functional Requirements** | Performance, security, accessibility, scalability |
-| 7 | **Out of Scope** | Explicit list of what this feature will not cover |
-| 8 | **Open Questions** | Unresolved decisions with owner and due date |
-| 9 | **Timeline & Milestones** | Phases from discovery through post-launch review |
+| 3 | **Target Persona** | Persona type (Internal/External), role, goals, pain points, and how they interact with the product |
+| 4 | **Goals & Success Metrics** | Goals and measurable KPIs with baselines and targets |
+| 5 | **User Stories** | Primary and secondary stories in As a / I want / So that format |
+| 6 | **Functional Requirements** | What the system must do, prioritised P0 / P1 / P2 |
+| 7 | **Non-Functional Requirements** | Performance, security, accessibility, scalability |
+| 8 | **Out of Scope** | Explicit list of what this feature will not cover |
+| 9 | **Open Questions** | Unresolved decisions with owner and due date |
+| 10 | **Timeline & Milestones** | Phases from discovery through post-launch review |
 
 ---
 
