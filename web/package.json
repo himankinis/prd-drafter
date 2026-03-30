@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "better-sqlite3": "^12.8.0",
-    "clsx": "^2.1.1",
     "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "lucide-react": "^0.462.0",
     "marked": "^13.0.0",
@@ -26,6 +26,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.27",
     "eslint": "^8",
     "eslint-config-next": "15.1.0",
     "postcss": "^8",
