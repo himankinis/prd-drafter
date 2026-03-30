@@ -141,6 +141,8 @@ npm run dev   # → http://localhost:3001
 | Brief Input | Enter a feature name + brief, hit Generate PRD |
 | PRD Output | Streams in real time as Claude writes it; Copy or Download as .md |
 
+<img width="1454" height="750" alt="image" src="https://github.com/user-attachments/assets/fccd2294-1955-4f0b-8145-e4d65e3b1e2a" />
+
 All PRDs are stored in a local SQLite database at `~/.prd-drafter/prd-drafter.db`. No cloud storage, no API key needed.
 
 ---
