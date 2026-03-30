@@ -103,7 +103,7 @@ export default function Home() {
         </aside>
 
         {/* Brief + PRD panels */}
-        <main className="flex-1 grid grid-cols-2 gap-4 p-4 overflow-hidden">
+        <main className="flex-1 min-h-0 grid grid-cols-2 gap-4 p-4 overflow-hidden">
           <BriefPanel generating={generating} onGenerate={handleGenerate} />
           <PrdPanel
             prdContent={prdContent}

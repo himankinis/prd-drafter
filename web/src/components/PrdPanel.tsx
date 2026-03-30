@@ -53,7 +53,7 @@ export default function PrdPanel({ prdContent, generating, error, featureName }:
   const isEmpty = !prdContent && !generating && !error;
 
   return (
-    <Card className="flex flex-col h-full">
+    <Card className="flex flex-col h-full min-h-0 overflow-hidden">
       <CardHeader className="pb-3 flex-row items-center justify-between space-y-0">
         <CardTitle className="text-sm flex items-center gap-2">
           <FileText className="h-4 w-4 text-primary" />

@@ -36,7 +36,7 @@ export default function BriefPanel({ generating, onGenerate }: Props) {
   };
 
   return (
-    <Card className="flex flex-col h-full">
+    <Card className="flex flex-col h-full min-h-0 overflow-hidden">
       <CardHeader className="pb-3">
         <CardTitle className="text-sm flex items-center gap-2">
           <Wand2 className="h-4 w-4 text-primary" />
