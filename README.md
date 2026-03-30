@@ -70,17 +70,46 @@ claude "Read brief.txt and templates/prd_template.md, then generate a complete P
 
 ---
 
+## Web UI
+
+A browser-based interface is available in the `web/` directory. It provides a 3-panel layout (history sidebar, brief input, streaming PRD output) and stores all generated PRDs in a local SQLite database.
+
+### Run the Web UI
+
+```bash
+cd web
+npm install
+npm run dev   # → http://localhost:3001
+```
+
+**Requirements:** Node.js 18+ and the Claude Code CLI on your PATH.
+
+### Features
+
+- Paste a feature brief and click **Generate PRD** — streams the output in real time
+- **History sidebar** — all past PRDs saved locally, click to reload any
+- **Copy** or **Download as .md** from the PRD panel
+- No API key required — uses the `claude` CLI under the hood
+
+---
+
 ## Project Structure
 
 ```
 prd-drafter/
-├── brief.txt                  ← edit this before each run
+├── brief.txt                  ← written automatically by the web UI (or edit manually)
 ├── templates/
 │   └── prd_template.md        ← PRD structure (customise for your team)
 ├── src/
 │   └── draft_prd.py           ← convenience wrapper around the claude CLI
 ├── output/
 │   └── prd_draft.md           ← generated output (git-ignored)
+├── web/                       ← Next.js web UI
+│   ├── src/
+│   │   ├── app/               ← App Router pages + API routes
+│   │   ├── components/        ← BriefPanel, PrdPanel, HistorySidebar
+│   │   └── lib/               ← SQLite db, types, utils
+│   └── package.json
 ├── .gitignore
 └── README.md
 ```

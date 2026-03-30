@@ -119,8 +119,34 @@ The NorthStar Migration Framework is a structured decision-making product that d
 
 ---
 
-## Advanced: Clone the Full Tool
+## Web UI (Recommended for Regular Use)
 
-For those who want the full Claude Code workflow with automated file generation, clone the repo:
+A browser-based interface is available for those who want a more streamlined experience without the terminal.
+
+**Setup:**
+```bash
+git clone https://github.com/himankinis/prd-drafter
+cd prd-drafter/web
+npm install
+npm run dev   # → http://localhost:3001
+```
+
+**Requirements:** Node.js 18+ and Claude Code CLI installed.
+
+**What you get:**
+
+| Panel | Description |
+|-------|-------------|
+| History Sidebar | All past PRDs saved locally — click any to reload |
+| Brief Input | Enter a feature name + brief, hit Generate PRD |
+| PRD Output | Streams in real time as Claude writes it; Copy or Download as .md |
+
+All PRDs are stored in a local SQLite database at `~/.prd-drafter/prd-drafter.db`. No cloud storage, no API key needed.
+
+---
+
+## Advanced: Clone the Full Tool (CLI)
+
+For the original Claude Code CLI workflow with file-based generation, clone the repo and follow the README:
 
 [https://github.com/himankinis/prd-drafter](https://github.com/himankinis/prd-drafter)
